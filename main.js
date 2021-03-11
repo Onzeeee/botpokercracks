@@ -62,7 +62,7 @@ const loadEvents = (dir = "./events/") => {
     })
 }
 
-loadCommands()
-loadEvents()
+loadCommands();
+loadEvents();
 
-client.login(TOKEN)
+client.login(process.env.TOKEN);
