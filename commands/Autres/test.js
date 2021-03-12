@@ -3,8 +3,8 @@ module.exports.run = (client, message, args) => {
 }
 
 module.exports.help = {
-    name: "ping",
-    alias: ['ping'],
+    name: "test",
+    alias: ['test'],
     category: 'autres',
     description: "Renvoi pong!",
     cooldown: 10,
