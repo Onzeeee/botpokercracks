@@ -33,6 +33,4 @@ const loadEvents = (dir = "./events/") => {
 loadCommands();
 loadEvents();
 
-client.login("Nzg1OTk2OTIyNTY5NzUyNjM2.X8_-rQ.LvGXZfa464dATlUDnjW7CQZtXmo");
-// process.env.TOKEN
-// Nzg1OTk2OTIyNTY5NzUyNjM2.X8_-rQ.LvGXZfa464dATlUDnjW7CQZtXmo
+client.login(process.env.TOKEN);
