@@ -1,8 +1,5 @@
 const { Client, Collection } = require('discord.js')
-const { TOKEN } = require('./config')
 const fs = require("fs")
-const bdUti = require(`./assets/bd/utilisateur.json`)
-const bdMar = require(`./assets/bd/marchand.json`)
 
 const client = new Client()
 const collections = ["commands", "cooldowns"]
@@ -36,4 +33,6 @@ const loadEvents = (dir = "./events/") => {
 loadCommands();
 loadEvents();
 
-client.login(process.env.TOKEN);
+client.login("Nzg1OTk2OTIyNTY5NzUyNjM2.X8_-rQ.LvGXZfa464dATlUDnjW7CQZtXmo");
+// process.env.TOKEN
+// Nzg1OTk2OTIyNTY5NzUyNjM2.X8_-rQ.LvGXZfa464dATlUDnjW7CQZtXmo
