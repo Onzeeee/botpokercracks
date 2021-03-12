@@ -8,35 +8,6 @@ const client = new Client()
 const collections = ["commands", "cooldowns"]
 collections.forEach(x => client[x] = new Collection())
 
-
-function demarrageTirage(){
-    var intervalId = setInterval(donnerTirage, 60000)
-}
-function donnerTirage(){
-    var dday = new Date()
-    var ddaym = dday.getMinutes()
-    var ddayh = dday.getHours()
-    if(ddaym > 0){
-        for(var i = 0; i < bdUti["nbrPokedex"].nombre;i++){
-            if(bdUti[bdUti["nomUti"].utilisateur[i]].tirage < 1){
-                bdUti[bdUti["nomUti"].utilisateur[i]].tirage = bdUti[bdUti["nomUti"].utilisateur[i]].tirage + 1
-            }
-        }
-        fs.writeFile(`./assets/bd/utilisateur.json`, JSON.stringify(bdUti), err =>{
-            if(err) console.log(err)
-        })
-    }
-    if(ddayh == 24 || ddayh == 0){
-        bdMar["daily"].utilisateur = []
-        fs.writeFile(`./assets/bd/marchand.json`, JSON.stringify(bdMar), err =>{
-            if(err) console.log(err)
-        })
-        bdMar["marchand"].objetsAuj = []
-    }
-}
-
-demarrageTirage()
-
 const loadCommands = (dir = "./commands") => {
     fs.readdirSync(dir).forEach(dirs => {
         const commands = fs.readdirSync(`${dir}/${dirs}/`).filter(files => files.endsWith(".js"))
